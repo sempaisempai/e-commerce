@@ -1,0 +1,315 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: #FFA6EA;
+}
+
+
+.frontpage {
+    height: 100vh;
+    background-image: url("wallpaper/waymikowallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.frontpage .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.frontpage .logo img {
+    background-color: color-mix(in srgb, hotpink, transparent 10%);
+    width: 60px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px pink;
+    margin: 10px 30px;
+}
+.frontpage nav {
+    position: relative;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+.frontpage ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+.frontpage li {
+    padding: 20px;
+}
+.frontpage li, .frontpage a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+.frontpage li:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+.front-title {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.special-dish {
+    margin: 50px;
+    position: relative;
+}
+.special-dish img {
+    width: 500px;
+}
+.special-dish .food {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 100px;
+    background-color: hotpink;
+    box-shadow: 5px 5px #CE1292;
+    position: absolute;
+    bottom: 70px;
+    right: -40px;
+}
+.special-dish .food-name {
+    font-size: 40px;
+    font-weight: bold;
+}
+.special-dish .food-info {
+    margin-left: 20px;
+}
+
+
+.title {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+.title p {
+    animation: color 5s linear infinite;
+    font-size: 60px;
+    font-weight: bold;
+}
+@keyframes color {
+    0% {
+        color: #FFA6EA;
+        text-shadow: 0 0 10px #FFA6EA;
+    }
+    25% {
+        color: #FF63DB;
+        text-shadow: 0 0 10px #FF63DB;
+    }
+    50% {
+        color: #FF00C3;
+        text-shadow: 0 0 10px #FF00C3;
+    }
+    75% {
+        color: #FF63DB;
+        text-shadow: 0 0 10px #FF63DB;
+    }
+    100% {
+        color: #FFA6EA;
+        text-shadow: 0 0 10px #FFA6EA;
+    }
+}
+.title a {
+    color: black;
+    background-color: #FFA6EA;
+    padding: 20px;
+    border-radius: 100px;
+    font-size: 25px;
+    transition: color 300ms, background-color 300ms;
+}
+.title a:hover {
+    background-color: #FF00C3;
+    color: white;
+}
+
+
+
+
+.yaemiko {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+.yaemiko .body {
+    background-color: hotpink;
+    border-radius: 50%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.yaemiko img {
+    max-width: 200px;
+}
+.yaemiko .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms;
+}
+.yaemiko .text p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 300ms, font-size 300ms;
+}
+.yaemiko .body:hover .text p {
+    opacity: 1;
+    font-size: 20px;
+    text-shadow: 0 0 10px black;
+}
+.menu marquee {
+    font-size: 25px;
+    font-weight: bold;
+    color: #9901b4;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: text-shadow 3s linear infinite;
+}
+@keyframes text-shadow {
+    0% {
+        text-shadow: 0 0 5px #F1A4FF, 0 0 10px #F1A4FF;
+    }
+    25% {
+        text-shadow: 0 0 5px #E96BFF, 0 0 10px #E96BFF;
+    }
+    50% {
+        text-shadow: 0 0 5px #D902FF, 0 0 10px #D902FF;
+    }
+    75% {
+        text-shadow: 0 0 5px #E96BFF, 0 0 10px #E96BFF;
+    }
+    100% {
+        text-shadow: 0 0 5px #F1A4FF, 0 0 10px #F1A4FF;
+    }
+}
+@keyframes changecolor {
+    0% {
+        color: white;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+
+
+
+
+
+/*cakes*/
+.menu {
+    padding: 40px 20px;
+}
+.cake-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 100%;
+}
+.cake-card {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid black;
+}
+.cake-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms;
+}
+.cake-card .cake-text {
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: -180px;
+    background-color: color-mix(in srgb, black, transparent 70%);
+    width: 100%;
+    padding: 20px;
+    font-size: 12px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: bottom 300ms, opacity 300ms;
+}
+.cake-card:hover .cake-text {
+    opacity: 1;
+    bottom: 0;
+}
+.cake-card:hover img {
+    transform: scale(1.5);
+}
+
+
+footer {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top {
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.top:active {
+    background-color: pink;
+} 
+.top img {
+    width: 70px;
+    margin-right: 10px;
+}
+.top p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
