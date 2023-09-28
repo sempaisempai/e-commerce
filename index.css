@@ -1,0 +1,277 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: #ff99c8;
+}
+
+
+.frontpage {
+    width: 100%;
+    height: 100vh;
+    background-image: url("wallpaper/desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.logo p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo img {
+    background-color: #FF00C3;
+    width: 50px;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff99c8;
+}
+
+
+
+
+.navbar {
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.navbar li {
+    list-style: none;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+.navbar li:hover {
+    transform: scale(1.2);
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+
+
+
+.navbar .toggle-btn {
+    color: white;
+    font-size: 1rem;
+    display: none;
+}
+.dropdown-btn {
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 300ms;
+    margin-bottom: 50px;
+    display: none;
+}
+.dropdown-btn li {
+    list-style: none;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 300ms;
+}
+.dropdown-btn li:hover {
+    transform: scale(1.3);
+}
+.dropdown-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-btn.open {
+    height: 130px;
+}
+
+
+
+
+.front-title {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.special-dish {
+    margin: 0 30px;
+    position: relative;
+    cursor: default;
+}
+.special-dish img {
+    width: 400px;
+}
+.special-dish .food-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.special-dish .food-info {
+    font-size: 10px;
+    margin-left: 20px;
+}
+.special-dish .food {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 100px;
+    background-color: hotpink;
+    box-shadow: 3px 3px #CE1292;
+    position: absolute;
+    bottom: 90px;
+    right: 0px;
+}
+
+
+.title {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 70px;
+    cursor: default;
+
+}
+.title p {
+    color: #ff99c8;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #CE1292, 0 0 5px #FF63DB;
+}
+.title a {
+    text-decoration: none;
+    color: white;
+    background-color: #ffb3c6;
+    padding: 10px;
+    border-radius: 100px;
+    font-size: 18px;
+    transition: background-color 300ms, transform 300ms;
+}
+.title a:hover {
+    transform: scale(1.03);
+    background-color: #fb6f92;
+}
+
+
+
+
+
+marquee {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4d6d;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foods {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+.foods .body {
+    background-color: #ffd6ff;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+}
+.foods .body:hover .text {
+    transform: scale(1.05);
+}
+.foods img {
+    max-width: 150px;
+}
+.foods .text {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    right: -60px;
+    transition: transform 300ms;
+}
+.foods .text p {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    background-color: #FF63DB;
+    box-shadow: 3px 3px #CE1292;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .frontpage {
+        height: auto;
+        background-image: url('wallpaper/android.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar ul {
+        display: none;
+    }
+    .navbar .toggle-btn, .dropdown-btn{
+        display: block;
+    }
+    .front-title {
+        padding: 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .special-dish img {
+        width: 300px;
+    }
+    .special-dish .food {
+        padding: 10px 15px;
+        color: white;
+        border-radius: 100px;
+        background-color: hotpink;
+        box-shadow: 3px 3px #CE1292;
+        position: absolute;
+        bottom: 60px;
+        right: 50px;
+    }
+    .title p {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .foods {
+        row-gap: 30px;
+    }
+}
